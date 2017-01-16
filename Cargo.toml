@@ -1,0 +1,8 @@
+[package]
+name = "p2p_with_tox_lib"
+version = "0.1.0"
+authors = ["eyalron33 <eyalron33@gmail.com>"]
+
+[dependencies]
+rustc-serialize = "0.3.22"
+tox = { git = "https://github.com/zetok/tox/" }
