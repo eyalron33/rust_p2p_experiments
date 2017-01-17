@@ -37,7 +37,7 @@ fn main() {
         .expect("Failed to bind to socket!");
 
     // send DhtPacket via socket to the node (Imppy's)
-    let sent_bytes = socket.send_to(&dhtpacket, &"83.31.214.36:33445".parse().unwrap())
+    let sent_bytes = socket.send_to(&dhtpacket, &"178.62.250.138:33445".parse().unwrap())
         .expect("Failed to send bytes!").unwrap();
 
     println!("Sent {} bytes of Ping request to the bootstrap node", sent_bytes);
