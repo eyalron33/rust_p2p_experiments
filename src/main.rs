@@ -38,8 +38,10 @@ fn main() {
     let socket = bind_udp("::".parse().unwrap(), 33445..33546)
         .expect("Failed to bind to socket!");
 
+    let listening_ip = "178.62.250.138:33445".parse::<SocketAddr>().unwrap();
+
     // send DhtPacket via socket to the node (Imppy's)
-    let sent_bytes = socket.send_to(&dhtpacket, &"178.62.250.138:33445".parse::<SocketAddr>().unwrap())
+    let sent_bytes = socket.send_to(&dhtpacket, &listening_ip)
         .expect("Failed to send bytes!").unwrap();
 
     println!("Sent {} bytes of Ping request to the bootstrap node", sent_bytes);
